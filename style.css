@@ -1,0 +1,156 @@
+/*--------------------*/
+/*  Global Variables  */
+/*--------------------*/
+:root{
+    /*--------------------*/
+    /*  Color variables   */
+    /*--------------------*/
+    --primary-color: blue;
+    --secondary-color: green;
+    --accent-color: azure;
+    --neutral-color: darkgrey; /*Used for text color and white space*/
+
+    /*--------------------*/
+    /*Typography Variables*/
+    /*--------------------*/
+    --body-font-style: Helvetica;
+    --heading-font-syle: Helvetica;
+
+    /*Font Sizes*/
+    --large-heading-size: 4rem;
+    --heading-font-size: 3rem;
+    --sub-heading-font-size: 2rem;
+    --body-font-size: 1rem;
+    --nav-bar-font-size: 1rem;
+    --figcaption-font-size: 0.75rem
+}
+
+/*------------------------*/
+/*    HTML Properties     */
+/*------------------------*/
+html{
+    font-size: 16px;
+}
+
+/*------------------------*/
+/*  Universal Properties  */
+/*------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/*------------------------*/
+/*    Utility Classes     */
+/*------------------------*/
+
+/*Any content using this class willl be hidden from view and used by screenreaders only*/
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.grid-container{
+    display: grid;
+}
+
+.flex-container{
+    display: flex;
+}
+
+/*------------------------*/
+/*    General Styling     */
+/*------------------------*/
+body{
+    min-width: 320px;
+    max-width: 1920px;
+    background-color: var(--neutral-color);
+}
+
+/*Defines scroll snap behavoir for container element with this class*/ 
+.scroller-snap-container {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+ 
+/*Any element with this class will be designated as a scroll snap point*/
+.scroller-snap-point {
+    scroll-snap-align: start;
+}
+
+/*This defines the styling for the homepage heading which may take up the whole screen*/
+#home-heading-text{
+    font-size: var(--large-heading-size);
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-bar-list-item{
+    list-style-type: none;
+}
+
+.nav-bar-link-item{
+    text-decoration: none;
+}
+
+.heading-text{
+    font-size: var(--heading-font-size);
+    font-family: var(--heading-font-syle);
+}
+
+.sub-heading-text{
+    font-size: var(--sub-heading-font-size);
+    font-family: var(--heading-font-syle);
+}
+
+.body-text{
+    font-size: var(--body-font-size);
+    font-family: var(--body-font-syle);
+}  
+
+
+/*------------------------*/
+/*    Media queries       */
+/*------------------------*/
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+    html{
+        font-size: 20px;
+    }
+
+    body{
+        padding: 1rem
+    }
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px) 
+    and (max-device-width: 1024px) {
+    html{
+        font-size: 16px;
+    }
+
+   body{
+        padding: 0.5rem
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    html{
+        font-size: 16px;
+    } 
+
+    body{
+        padding: 0rem;
+    }
+}

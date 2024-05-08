@@ -14,6 +14,19 @@ for(let i = 0; i < 16; i++){
         gridCell.classList.add("cell");
 
         gridRow.appendChild(gridCell);
+
+        gridCell.addEventListener("mousedown", shade);
+
+        gridCell.addEventListener("mouseover", shade)
     }
 
+}
+
+
+function shade(){
+    this.classList.add("shade");
+}
+
+function  unshade(){
+    this.classList.remove("shade");
 }

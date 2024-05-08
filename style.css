@@ -22,7 +22,14 @@
     --sub-heading-font-size: 2rem;
     --body-font-size: 1rem;
     --nav-bar-font-size: 1rem;
-    --figcaption-font-size: 0.75rem
+    --figcaption-font-size: 0.75rem;
+
+    /*--------------------*/
+    /*  Custom Variables  */
+    /*--------------------*/
+    
+    --grid-width: 400px;
+
 }
 
 /*------------------------*/
@@ -119,7 +126,7 @@ body{
 
 #gridContainer{
     aspect-ratio: 1/1;
-    width: 320px
+    width: var(--grid-width);
 }
 
 .row{
@@ -130,9 +137,13 @@ body{
 }
 
 .cell{
-    width:20px;
-    height:20px;
+    width: calc(var(--grid-width)/16);
+    aspect-ratio: 1/1;
     border: solid black 1px;
+}
+
+.shade{
+    background-color: black;
 }
 
 

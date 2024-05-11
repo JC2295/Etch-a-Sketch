@@ -20,6 +20,8 @@ function updateGridSize(){
 
 function createGrid(){
 
+    
+
     for(let i = 0; i < gridSizeValue; i++){
 
         let gridRow = document.createElement("div");
@@ -35,20 +37,12 @@ function createGrid(){
 
             gridRow.appendChild(gridCell);
 
-            gridCell.addEventListener("mousedown", shade);
-
-            gridCell.addEventListener("mouseover", shade)
+            gridCell.addEventListener("mouseover", function(e){
+                if(e.buttons == 1 || e.buttons == 3){
+                    this.classList.add("shade");
+                }
+            });
         }
 
     }
-
-
-    function shade(){
-        this.classList.add("shade");
-    }
-
-    function  unshade(){
-        this.classList.remove("shade");
-    }
-
 };

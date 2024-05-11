@@ -27,8 +27,8 @@
     /*--------------------*/
     /*  Custom Variables  */
     /*--------------------*/
-    
-    --grid-width: 400px;
+    --grid-width: 75vh;
+    --grid-size: 10;
 
 }
 
@@ -127,6 +127,7 @@ body{
 #gridContainer{
     aspect-ratio: 1/1;
     width: var(--grid-width);
+    border: solid black 2px;
 }
 
 .row{
@@ -137,7 +138,7 @@ body{
 }
 
 .cell{
-    width: calc(var(--grid-width)/16);
+    width: calc( var(--grid-width) / var(--grid-size));
     aspect-ratio: 1/1;
     border: solid black 1px;
 }

@@ -20,8 +20,6 @@ function updateGridSize(){
 
 function createGrid(){
 
-    
-
     for(let i = 0; i < gridSizeValue; i++){
 
         let gridRow = document.createElement("div");

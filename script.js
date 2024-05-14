@@ -4,6 +4,14 @@ let gridSizeInput = document.querySelector("#gridSizeInput");
 
 let gridSizeValue = gridSizeInput.value;
 
+let resetButton = document.querySelector("#reset-btn");
+
+
+resetButton.addEventListener("click", () => {
+    updateGridSize();
+});
+
+
 gridSizeInput.addEventListener("change", updateGridSize);
 
 updateGridSize();

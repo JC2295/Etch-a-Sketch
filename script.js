@@ -6,6 +6,8 @@ let gridSizeValue = gridSizeInput.value;
 
 gridSizeInput.addEventListener("change", updateGridSize);
 
+updateGridSize();
+
 function updateGridSize(){
 
     gridSizeValue = gridSizeInput.value;

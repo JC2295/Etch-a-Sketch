@@ -84,6 +84,11 @@ body{
 .scroller-snap-container {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
  
 /*Any element with this class will be designated as a scroll snap point*/
@@ -124,10 +129,17 @@ body{
     font-family: var(--body-font-syle);
 }  
 
+#app-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 #gridContainer{
     aspect-ratio: 1/1;
     width: var(--grid-width);
-    border: solid black 2px;
+    border: ridge red 2rem;
+    border-radius: 1rem;
 }
 
 .row{
